@@ -1,0 +1,77 @@
+# Site
+name: "hoony9x"
+title: "hoony9x"
+description: "SW Engineer in Republic of Korea."
+logo: 'assets/images/logo.svg'
+favicon: 'assets/images/favicon-96x96.png'
+baseurl: ''
+url: 'https://hoony9x.com'
+locale: 'ko_KR'
+google_analytics: 'G-WFFNB3YX8D'
+naver_analytics: '956e9c8bc310d0'
+disqus: 'blog-khhan1993-com'
+mailchimp-list:
+timezone: 'Asia/Seoul'
+include: ["_pages"]
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      image: 'assets/images/og_image.png'
+      layout: 'post'
+
+# Authors
+authors:
+  hoony9x:
+    name: Kihoon Han
+    display_name: hoony9x
+    avatar: 'assets/images/avatar.png'
+    gravatar: 0abd3f69f716598f0da0172752ef9db1
+    email: me@hoony9x.com
+    web: https://hoony9x.com
+    twitter: https://twitter.com/hoony9x
+    description: ""
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-minifier
+  - jekyll-compress-images
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page/:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
